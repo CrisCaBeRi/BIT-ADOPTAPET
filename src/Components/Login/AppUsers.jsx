@@ -1,19 +1,18 @@
-import AddUser from "./AddUser"
-import UsersProvider from "./UsersProvider"
+import UsersProvider from "./UsersProvider";
 
+//import AddUser from "./AddUser";
 
+import LoginUsers from "./LoginUsers";
 const AppUsers = () => {
+  return (
+    <>
+      <UsersProvider>
+        {/* <AddUser /> */}
+        <LoginUsers/>
 
 
-    return (
-        <><UsersProvider>
-            <AddUser/>
-
-
-
-        </UsersProvider>
-        
-        </>
-    )
-}
+      </UsersProvider>
+    </>
+  );
+};
 export default AppUsers;

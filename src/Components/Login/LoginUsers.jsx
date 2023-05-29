@@ -1,27 +1,32 @@
 import { useContext } from "react";
-import USERSCONTEXT from "./UsersContex"; 
+import USERSCONTEXT from "./UsersContex";
 
 export default function LoginUsers() {
-    const {LoginUsers} = useContext(USERSCONTEXT); 
+  const { loginUser } = useContext(USERSCONTEXT);
 
-    const validateUser = (event) =>{
-        console.log(email,password)
-        event.preventDefault(); 
-        let {email, password} = event.target.elements; 
-        LoginUsers(email.value, password.value)
-    }
+  const validateUser = (event) => {    
+    event.preventDefault();    
+    let { email, password } = event.target.elements;
+    //console.log(email.value, password.value)
+    loginUser(email.value, password.value);
+  };
 
-    return (
-        <form action="#" onSubmit={validateUser}>
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="Ingresa tu correo" required/>
-            <br />
-            <label htmlFor="name">Contraseña</label>
-            <input type="password" id="password" required/>            
-            <br />
-            <input type="submit" />            
-        </form>
-    )
+  return (
+    <form action="#" onSubmit={validateUser}>
+      <label htmlFor="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ingresa tu correo"
+        required
+      />
+      <br />
 
-
+      <label htmlFor="name">Contraseña</label>
+      <input type="password" id="password" required name="password" />
+      <br />
+      <input type="submit" />
+    </form>
+  );
 }
