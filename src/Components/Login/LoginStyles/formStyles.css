@@ -1,0 +1,62 @@
+@import url(../../../Styles/App.css);
+
+:root {
+  --fontType: "Montserrat", sans-serif;
+  --mnFontW: 400;
+  --scFont: 300;
+  --btnFont:700
+}
+
+form {
+  background-color: orange;
+  width: 80%;
+  box-shadow: -2px -1px 51px 12px rgba(176, 176, 176, 1);
+  border-radius: 1rem;
+  padding-top: 1.5rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-family: var(--fontType);
+}
+
+form > h3 {
+  font-size: 1.5rem;
+}
+form img {
+  height: 200px;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+form input {
+  width: 80%;
+  border-radius: 0.5rem;
+  border: 1px solid orange;
+  padding: 0.5rem;
+}
+
+#submitBtn {
+  background-color: orange;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: var(--btnFont);
+  transition: 0.2s ease-in;
+}
+
+#submitBtn:hover {
+    transform: scale(1.05);
+    background-color: orangered;
+
+}
+

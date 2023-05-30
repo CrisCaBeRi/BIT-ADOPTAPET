@@ -1,0 +1,9 @@
+@import url(../../Styles/App.css);
+
+header {
+  background-color: red;
+  display: flex;
+  font-family: var(--fontType);
+  font-weight: var(--mnFontW);
+}
+

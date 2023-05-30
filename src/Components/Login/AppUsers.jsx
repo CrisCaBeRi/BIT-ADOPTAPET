@@ -1,14 +1,14 @@
 import UsersProvider from "./UsersProvider";
 
-//import AddUser from "./AddUser";
+import AddUser from "./AddUser";
 
-import LoginUsers from "./LoginUsers";
+//import LoginUsers from "./LoginUsers";
 const AppUsers = () => {
   return (
     <>
       <UsersProvider>
-        {/* <AddUser /> */}
-        <LoginUsers/>
+        <AddUser /> 
+        {/* <LoginUsers/> */}
 
 
       </UsersProvider>

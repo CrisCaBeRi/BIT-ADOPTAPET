@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --fontType: "Montserrat", sans-serif;
+  --mnFontW:400; 
+  --scFont:300;  
+  --btnFont:700
+}
+
 *{
   margin: 0;
   padding: 0;

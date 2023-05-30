@@ -11,8 +11,13 @@ const ShoppingProvider = ({ children }) => {
     },
   ]);
 
+  //const ADDPRODUCT = (prId) => {};
+
+  //const DELETEPRODUCT = (prId)=>{}; 
 
   
+
+
 
   return (
     <SHOPPINGCONTEXT.Provider value={{}}>{children}</SHOPPINGCONTEXT.Provider>
