@@ -2,84 +2,71 @@ import USERSCONTEXT from "./UsersContex";
 import { useState, useEffect } from "react";
 
 const UsersProvider = ({ children }) => {
-  let [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [userLogged, setUserLogged] = useState(null);
+  let [error, setError] = useState(null);
 
-  /* Get api from mockapi */
+  //! Get api from mockapi
   useEffect(() => {
-    const GETUSERS = () => {
-      fetch("https://64715b536a9370d5a41a5328.mockapi.io/Users")
-        .then((response) => response.json())
-        .then((data) => setUsers(data))
-        .catch((error) => console.error("Error", error));
-    };
-    GETUSERS();
-    //console.log(users);
-    return () => {
+    fetch("https://64715b536a9370d5a41a5328.mockapi.io/Users")
+      .then((response) => response.json())
+      .then((data) => setUsers(data))
+      .catch((error) => console.error("Error", error));
+    /* return () => {
       setUsers([]);
-    };
+    }; */
   }, []);
 
-
-//? ES NECESARIO MANEJAR LAS PETICIONES DESDE AQUI O SE PUEDEN DESDE CADA COMPONENTE 
-
-  //Function to users validation
-  const FETCHING = (userId) => {
-    fetch(`https://64715b536a9370d5a41a5328.mockapi.io/Users/${userId}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ isOnline: true }),
-    });
-    alert("Sesion iniciada");
-  };
-  //! FIX TODO WORKING ENCONTRAR UNA FUNCION QUE NO REPITA LAS VALIDACIONES
-
-  const loginUser = (email, password) => {
-    //console.log(`llegaste, ${email}, ${password}`);
-    users.find((findUser) =>
-      findUser.email === email && findUser.password === password
-        ? FETCHING(findUser.id)
-        : alert("Usuario no encontrado")
-    );
+  const loginUser = (email, password) => {   
+    let userFinded = users.find(
+      (user) => user.email === email && user.password === password
+    );   
+    if(!userFinded){
+      setError("Usuario o contrtaseña invalida"); 
+      setUserLogged(null);
+      return false;
+    }
+    setUserLogged(userFinded)
+    console.log(userLogged)
   };
 
-  //TODO SEND NOTIFICATION FOR ADDUser complete
-  // TODO VALIDATE IF USER EXIST
-  const addUser = (name, email, password, phoneNumber, isOnline) => {
-    fetch("https://64715b536a9370d5a41a5328.mockapi.io/Users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json", //multipart/form-data
-      },
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        password: password,
-        phoneNumber: phoneNumber,
-        isOnline: isOnline,
-      }),
-    })
-      .then((respuesta) => respuesta.json())
-      .then((data) => {
-        setUsers([...users, data]);
+   /* const LOGOUT = () => {
+    setUserLogged(null)
+  } */
+
+  const addUser = (name, email, password, phoneNumber) => {
+    //Validaton if exist
+    const userFinded = users.filter((user) => user.email === email);
+    if (userFinded) {
+      setError("Un usuario ya posee este correo o contraseña");
+    } else {
+      fetch("https://64715b536a9370d5a41a5328.mockapi.io/Users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", //multipart/form-data
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password,
+          phoneNumber: phoneNumber,
+        }),
       })
-      .catch((error) => console.error("Error", error));
+        .then((respuesta) => respuesta.json())
+        .then((data) => {
+          setUsers([...users, data]);
+        })
+        .catch((error) => console.error("Error", error));
+    }
   };
 
-
-
+  //TODO EDITAR DATOS
+  //INGRESAR NOMBRE TELEFONO Y CORREO
 
   return (
-    <USERSCONTEXT.Provider value={{ loginUser, addUser }}>
+    <USERSCONTEXT.Provider value={{ loginUser, addUser, userLogged }}>
       {children}
     </USERSCONTEXT.Provider>
   );
 };
-
-/*
-const logoutUser = () => {
-
-} */
-
 export default UsersProvider;

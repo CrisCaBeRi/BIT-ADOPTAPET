@@ -1,17 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import AppUsers from './Components/Login/AppUsers'
-//import LoginUsers from './Components/Login/LoginUsers'
-//import AddUser from './Components/Login/AddUser'
+import App from "./Components/App"
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    
-    {/* <LoginUsers/> */}
-
-
-    {/* <AddUser/> */}
-
-    <AppUsers/>
+  <React.StrictMode>    
+    <App/>
   </React.StrictMode>,
 )

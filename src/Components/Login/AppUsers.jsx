@@ -1,16 +1,17 @@
 import UsersProvider from "./UsersProvider";
 
-//import AddUser from "./AddUser";
-
+import AddUser from "./AddUser";
 import LoginUsers from "./LoginUsers";
+import  {Header}  from "../Header/Header";
+
+//import LoginUsers from "./LoginUsers";
 const AppUsers = () => {
   return (
     <>
-      <UsersProvider>
-        {/* <AddUser /> */}
+      <UsersProvider>        
+        <Header/>
+        <AddUser /> 
         <LoginUsers/>
-
-
       </UsersProvider>
     </>
   );
