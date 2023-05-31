@@ -5,7 +5,8 @@ import "./LoginStyles/formStyles.css";
 import logo from "../Assets/LogoWhite.svg";
 
 export default function AddUser() {
-  const { addUser } = useContext(USERSCONTEXT);
+  const { addUser, userLogged } = useContext(USERSCONTEXT);
+  console.log(userLogged);
   const newUser = (e) => {
     e.preventDefault();
     let { name, email, password, phoneNumber } = e.target.elements;
@@ -13,44 +14,54 @@ export default function AddUser() {
     e.target.reset();
   };
   return (
-    <form action="" onSubmit={newUser}>
-      <h3>Registro</h3>
-      <picture>
-        <img src={logo} alt="" />
-      </picture>
+    <>{/* //!FALTAN LOS MENSAJES DE USUARIO YA REGISTRADO */}
+      {!userLogged ? (
+        <form action="" onSubmit={newUser}>
+          <h3>Registro</h3>
+          <picture>
+            <img src={logo} alt="" />
+          </picture>
 
-      <span className="divider">
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Nombres completos"
-          required
-        />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="email"
-          required
-        />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Contraseña"
-          required
-        />
-        <input
-          type="text"
-          id="phoneNumber"
-          name="phoneNumber"
-          placeholder="Telefono"
-          required
-        />
+          <span className="divider">
+            <label htmlFor="name">Nombres</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nombres completos"
+              required
+            />
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@example.com"
+              required
+            />
+            <label htmlFor="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Contraseña"
+              required
+            />
+            <label htmlFor="phoneNumber">Numero de teléfono</label>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Celular"
+              required
+            />
 
-        <input type="submit" id="submitBtn" />
-      </span>
-    </form>
+            <input type="submit" id="submitBtn" value={"Registrarme"} />
+          </span>
+        </form>
+      ) : (
+        <h2>Ya ingresaste</h2>
+      )}
+    </>
   );
 }

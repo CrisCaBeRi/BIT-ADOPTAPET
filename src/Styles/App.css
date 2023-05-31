@@ -4,7 +4,8 @@
   --fontType: "Montserrat", sans-serif;
   --mnFontW:400; 
   --scFont:300;  
-  --btnFont:700
+  --btnFont:700; 
+  --primaryColor: orange; 
 }
 
 *{
