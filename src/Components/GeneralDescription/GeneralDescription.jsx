@@ -4,7 +4,7 @@ const GeneralDescription = () => {
     return(<>
     <section className="cards">
         {dataPet.map((pet)=>(
-            <article className="petCard" key={`article-${pet.id}`}>
+            <article className="petCard" key={pet.id}>
                 <header>
                     <h1 className="title">{pet.name}</h1>
                 </header>
