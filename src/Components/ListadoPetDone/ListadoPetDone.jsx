@@ -1,9 +1,9 @@
-import {dataPet} from '../Data/adopta'
-import "../GeneralDescription/GeneralDescriptionStyles.css"
-const GeneralDescription = () => {
+import {listPet} from '../Data/listado'
+import "../ListadoPetDone/ListadoPetDoneStyles.css"
+const ListadoPetDone = () => {
     return(<>
     <section className="cards">
-        {dataPet.map((pet)=>(
+        {listPet.map((pet)=>(
             <article className="petCard" key={pet.id}>
                 <header>
                     <h1 className="title">{pet.name}</h1>
@@ -22,4 +22,4 @@ const GeneralDescription = () => {
     </section>
     </>)
 }
-export default GeneralDescription
+export default ListadoPetDone
