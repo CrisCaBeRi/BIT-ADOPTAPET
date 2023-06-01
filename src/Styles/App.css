@@ -2,14 +2,22 @@
 
 :root {
   --fontType: "Montserrat", sans-serif;
-  --mnFontW:400; 
-  --scFont:300;  
-  --btnFont:700; 
-  --primaryColor: orange; 
+  --mnFontW: 400;
+  --scFont: 300;
+  --btnFont: 700;
+  --primaryColor: orange;
+  --secColor: grey;
 }
-
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box;
+}
+main {
+  margin: 5rem 12vw;
+}
+@media screen and (min-width: 670px) {
+  main {
+    margin: 6rem 18vw;
+  }
 }

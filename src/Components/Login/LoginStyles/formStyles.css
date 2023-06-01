@@ -1,5 +1,5 @@
 @import url(../../../Styles/App.css);
-body{
+body {
   padding: 5rem 0;
 }
 form {
@@ -17,22 +17,20 @@ form {
   color: white;
   font-family: var(--fontType);
 }
-
 form > h3 {
   font-size: 1.5rem;
 }
 form img {
   height: 200px;
 }
-
 .divider {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   background-color: white;
   width: 100%;
   gap: 0.5rem;
-  padding: 1rem;  
-  border-radius:0 0 1rem 1rem ;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
 }
 .divider > label {
   color: grey;
@@ -46,7 +44,6 @@ form input {
   border: 1px solid var(--primaryColor);
   padding: 0.5rem;
 }
-
 #submitBtn {
   margin: 1rem auto;
   background-color: var(--primaryColor);
@@ -55,9 +52,22 @@ form input {
   font-weight: var(--btnFont);
   transition: 0.2s ease-in;
 }
-
 #submitBtn:hover {
-    transform: scale(1.05);
-    background-color: orangered;
+  transform: scale(1.05);
+  background-color: orangered;
 }
-
+#linkToRegister {
+  color: orange;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+  margin-bottom: 1rem;
+}
+#linkToRegister:hover {
+  color: blue;
+  transform: scale(1.05);
+}
+#error {
+  color: red;
+  text-align: center;
+}

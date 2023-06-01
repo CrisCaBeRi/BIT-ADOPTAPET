@@ -22,12 +22,14 @@ const UsersProvider = ({ children }) => {
       (user) => user.email === email && user.password === password
     );   
     if(!userFinded){
-      setError("Usuario o contrtaseña invalida"); 
+      setError("Usuario o contraseña invalida"); 
       setUserLogged(null);
       return false;
     }
-    setUserLogged(userFinded)
+    setUserLogged(userFinded);
+    setError(null)
     console.log(userLogged)
+    console.log(error)
   };
 
    /* const LOGOUT = () => {
@@ -64,7 +66,7 @@ const UsersProvider = ({ children }) => {
   //INGRESAR NOMBRE TELEFONO Y CORREO
 
   return (
-    <USERSCONTEXT.Provider value={{ loginUser, addUser, userLogged }}>
+    <USERSCONTEXT.Provider value={{ loginUser, addUser, userLogged, error }}>
       {children}
     </USERSCONTEXT.Provider>
   );

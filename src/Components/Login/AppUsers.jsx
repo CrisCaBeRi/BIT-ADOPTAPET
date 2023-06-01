@@ -2,16 +2,19 @@ import UsersProvider from "./UsersProvider";
 
 import AddUser from "./AddUser";
 import LoginUsers from "./LoginUsers";
+
 import  {Header}  from "../Header/Header";
+import { ShoppingNav } from "../ShoppingNav/ShoppingNav";
 
 //import LoginUsers from "./LoginUsers";
 const AppUsers = () => {
   return (
     <>
-      <UsersProvider>        
+      <UsersProvider>          
         <Header/>
         <AddUser /> 
         <LoginUsers/>
+        <ShoppingNav/>
       </UsersProvider>
     </>
   );
