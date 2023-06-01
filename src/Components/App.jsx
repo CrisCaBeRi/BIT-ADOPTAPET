@@ -7,7 +7,8 @@
 import ItemList from "../Components/ItemList/ItemList.jsx";
 import { ShopingCart } from "./ShoppingCart/ShopingCart"; */
 
-import AppUsers from "./Login/AppUsers";
+import ShoppingCard from "./ShoppingCard/ShoppingCard.jsx";
+
 
 //import { Header } from "./Header/Header";
 
@@ -17,7 +18,7 @@ import AppUsers from "./Login/AppUsers";
 const App = () => {
   return (
 
-    <AppUsers/>
+    <ShoppingCard/>
 
 
     
