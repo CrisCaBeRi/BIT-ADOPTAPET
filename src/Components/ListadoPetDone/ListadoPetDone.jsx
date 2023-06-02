@@ -1,13 +1,13 @@
-import {listPet} from '../Data/listado'
+import {listPet} from '../../Data/listado'
 import "../ListadoPetDone/ListadoPetDoneStyles.css"
 const ListadoPetDone = () => {
     return(<>
     <section className="cards">
         {listPet.map((pet)=>(
             <article className="petCard" key={pet.id}>
-                <header>
+                <span className='headerPet'>
                     <h1 className="title">{pet.name}</h1>
-                </header>
+                </span>
                 <img src={pet.imgUrl} alt="Pet Image"/>
                 <footer className="footerCard">
                     <ul className="footerCard-li">

@@ -1,4 +1,4 @@
-import luna from "../GeneralDescription/Assets/collie-shepherd-mixed-breed-mutt-puppy-dog-female-collie-shepherd-mixed-breed-mutt-puppy-dog-outdoor-adoption-photo-.webp"
+import luna from "../Components/GeneralDescription/Assets/perra.webp"
 
 export const  dataPet = [
     {

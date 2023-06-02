@@ -1,77 +1,73 @@
-.cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin: 50px 30px 10px 30px;
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 50px 30px 10px 30px;
 }
 
-.cards > .petCard{
-    background: bisque;
-    border-radius: 30px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    text-align: center;
-    height:400px;
-    width:250px;
+.cards > .petCard {
+  background: bisque;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  width: 250px;
 }
 
-.cards > .petCard{
-    background: bisque;
-    border-radius: 30px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    text-align: center;
-    height:400px;
-    width:250px;
-    padding: 5px;
+.cards > .petCard {
+  background: bisque;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  width: 250px;
+  padding: 5px;
 }
-.cards> .petCard .title{
-    font-size:large;
-    font-weight: bold;
+.cards > .petCard .title {
+  font-size: large;
+  font-weight: bold;
 }
 
 .cards > .petCard > img {
-    width: 100%;
-    max-height:50%;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-height: 50%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
 }
 .cards > .petCard > img:hover {
-    cursor: pointer;
-    transform: scale(1.4);
-  }
-
-.cards > .petCard > .footerCard > .footerCard-li{
-    font-size:medium;
-    font-weight: bold;
-    list-style: none;
-    margin: 10px;
-    padding: 0;
+  cursor: pointer;
+  transform: scale(1.4);
 }
-.cards > .petCard > .footerCard > .button{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+
+.cards > .petCard > .footerCard > .footerCard-li {
+  font-size: medium;
+  font-weight: bold;
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+}
+.cards > .petCard > .footerCard > .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .cards > .petCard > .footerCard > .button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
-
-
-
-
