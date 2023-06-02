@@ -1,0 +1,34 @@
+.CardDonate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ContentDonate{
+    display: grid;
+    place-items:center;
+    width:55% ;
+    border-style: groove;
+    border-radius:20px;
+    border-color: chocolate;
+    padding: 0px;
+
+}
+.ContentDonate >.DonaFigure{
+    margin: 0px;
+    height: 70%;
+    padding: 0px;
+}
+
+.ContentDonate >.DonaFigure >img{
+    height:90%;
+    border-radius:20px;
+    margin: 0px;
+}
+.ContentDonate > .Description{
+    width:70%;
+    margin-top:0px;
+    margin-bottom:8px;
+}
+
+
