@@ -4,9 +4,9 @@ import "../GeneralDescription/GeneralDescriptionStyles.css";
 const GeneralDescription = () => {
   //const [petData, setPetData] = useState([]);
 
-  const sendwhatsapp = () => {
+  const sendwhatsapp = (pet) => {
     let number = 573124116756;
-    let url = `https://wa.me/${number}?text= Hola, estoy interesado en adoptar a:${petData.name} `;
+    let url = `https://wa.me/${number}?text= Hola, estoy interesado en adoptar a:${pet.name}`;
     window.open(url);
   };
   return (
@@ -24,7 +24,7 @@ const GeneralDescription = () => {
                 <li>Edad: {pet.petAge}</li>
                 <li>Genero:{pet.gender}</li>
               </ul>
-              <button className="button" onClick={sendwhatsapp}></button>
+              <button className="button" onClick={()=>{sendwhatsapp(pet)}}></button>
             </footer>
           </article>
         ))}
