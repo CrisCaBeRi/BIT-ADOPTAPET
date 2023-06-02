@@ -1,0 +1,62 @@
+@import url(../../Styles/App.css);
+:root {
+  --fontType: "Montserrat", sans-serif;
+  --mnFontW: 400;
+  --scFont: 300;
+  --btnFont: 700;
+  --primaryColor: orange;
+  --secColor: grey;
+}
+
+.bill {
+  margin: 2rem 0;
+  border: 5px solid var(--primaryColor);
+  padding: 2rem;
+  width: 15rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+.bill > span {
+  width: 15rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--fontType);
+  font-weight: var(--btnFont);
+  font-size: 1.5rem;
+  color: white;
+  background-color: var(--primaryColor);
+}
+
+.bill button {
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+  font-family: var(--fontType);
+  font-weight: var(--btnFont);
+  font-size: 1rem;
+}
+.bill button:hover {
+  transform: scale(1.1);
+}
+
+#editCart {
+  background-color: var(--primaryColor);
+  color: white;
+  transition: 0.2s all ease-in;
+}
+#editCart:hover {
+  background-color: yellow;
+  color: black;
+}
+#sendCart {
+  background-color: rgb(0, 172, 0);
+  color: white;
+}
+#sendCart:hover {
+  background-color: green;  
+}

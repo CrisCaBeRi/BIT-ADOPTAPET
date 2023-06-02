@@ -1,5 +1,13 @@
-import { createContext } from "react";
+import { createContext , useState } from "react";
 
-const SHOPPINGCONTEXT = createContext([]); 
+export const SHOPPINGCONTEXT = createContext(null); 
 
-export default SHOPPINGCONTEXT; 
+export const ShoppingCartProvider = ({children})=>{
+    const [cart, setCart] = useState([]);
+
+  return (
+    <SHOPPINGCONTEXT.Provider value={[cart, setCart]}>
+      {children}
+    </SHOPPINGCONTEXT.Provider>
+  );
+}

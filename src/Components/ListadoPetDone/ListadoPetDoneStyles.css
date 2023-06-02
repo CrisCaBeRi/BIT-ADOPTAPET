@@ -1,73 +1,75 @@
-.cards {
+@import url(../../Styles/App.css);
+.sectionAdopt {
+  margin-bottom: 3rem;
+  gap: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin: 50px 30px 10px 30px;
+  flex-direction: column;
+  text-align: center;
 }
-
-.cards > .petCard {
-  background: bisque;
-  border-radius: 30px;
-  overflow: hidden;
+.sectionAdopt > h2 {
+  color: var(--primaryColor);
+  font-size: 2rem;
+}
+.listCardsPets {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  height: 400px;
-  width: 250px;
+  gap: 2rem;
 }
-
-.cards > .petCard {
-  background: bisque;
-  border-radius: 30px;
-  overflow: hidden;
+.petCard {
+  box-shadow: 6px 10px 23px -6px rgba(102, 102, 102, 1);
+  border-radius: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 400px;
-  width: 250px;
-  padding: 5px;
+  width: 18rem;
+  padding-bottom: 1rem;
 }
-.cards > .petCard .title {
-  font-size: large;
-  font-weight: bold;
+.petCard img {
+  width: 18rem;
+  height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 1rem;
 }
-
-.cards > .petCard > img {
-  width: 100%;
-  max-height: 50%;
-  object-fit: cover;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-}
-.cards > .petCard > img:hover {
-  cursor: pointer;
-  transform: scale(1.4);
-}
-
-.cards > .petCard > .footerCard > .footerCard-li {
-  font-size: medium;
-  font-weight: bold;
+.petCard ul {
+  margin: 1rem 0;
   list-style: none;
-  margin: 10px;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: var(--fontType);
 }
-.cards > .petCard > .footerCard > .button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4caf50;
+.specsPet span {
+  font-weight: var(--btnFont);
+  color: var(--primaryColor);
+}
+.petCard button {
+  background-color: var(--primaryColor);
+  border: none;
   color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  font-family: var(--fontType);
+  font-weight: var(--btnFont);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
 }
-
-.cards > .petCard > .footerCard > .button:hover {
-  background-color: #45a049;
+.petCard button:hover {
+  transform: scale(1.2);
+  background-color: green;
+}
+#titleGeneralDesc {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 670px) {
+  .sectionAdopt {
+    gap: 3rem;
+    margin: -5rem 0 6rem 0;
+  }
+  .listCardsPets {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

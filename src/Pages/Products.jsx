@@ -1,8 +1,12 @@
 import { Layout } from "../Components/Layout/Layout";
+import { ItemList } from "../Components/ShoppingCart/ItemList";
+import { ShoppingNav } from "../Components/ShoppingNav/ShoppingNav";
+
 export const Products = () => {
   return (
     <Layout>
-      <div>Products</div>
+      <ItemList/>
+      <ShoppingNav/>
     </Layout>
   );
 };
