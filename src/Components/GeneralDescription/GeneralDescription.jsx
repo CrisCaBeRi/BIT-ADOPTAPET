@@ -1,6 +1,12 @@
 import {dataPet} from '../Data/adopta'
 import "../GeneralDescription/GeneralDescriptionStyles.css"
 const GeneralDescription = () => {
+    const sendwhatsapp =(petname)=>{
+        let number = 573124116756;
+        let url = `https://wa.me/${number}?text= Hola, estoy interesado en adoptar a: ${petname}`;
+        console.log(petname);
+        window.open(url);
+    }
     return(<>
     <section className="cards">
         {dataPet.map((pet)=>(
@@ -15,7 +21,8 @@ const GeneralDescription = () => {
                         <li>Edad: {pet.petAge}</li>
                         <li>Genero:{pet.gender}</li>
                     </ul>
-                    <a href="../GeneralDescription/GeneralDescription.jsx" className="button">Adopta</a>
+                    <button className="button" onClick={sendwhatsapp(pet.name)}></button>
+
                 </footer>
             </article>
     ))}
@@ -23,3 +30,4 @@ const GeneralDescription = () => {
     </>)
 }
 export default GeneralDescription
+
