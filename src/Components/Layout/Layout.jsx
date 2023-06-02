@@ -1,5 +1,6 @@
 import { Header } from "./Header/Header";
 import "../../Styles/App.css"
+import { Footer } from "./Footer/Footer";
 //TODO IMPORT FOOTER
 
 export const Layout = ({ children }) => {
@@ -7,7 +8,7 @@ export const Layout = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
-            
+      <Footer/>      
     </>
   );
 };

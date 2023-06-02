@@ -27,11 +27,12 @@ header {
 }
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 5vw;
-  width: 100%;
-  font-size: 1rem;
+  gap: 2vw;
+  width: 60vw;
+  font-size: 0.5rem;
+  font-family: var(--fontType);
 }
 .navigation button {
   padding: 0.5rem;
@@ -40,8 +41,9 @@ header {
   transition: 0.2s all ease-in;
   cursor: pointer;
   font-family: var(--mainFont);
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
+  font-weight: var(--btnFont);
 }
 .navigation button:hover {
   transform: scale(1.1);
@@ -49,9 +51,9 @@ header {
 }
 #loginBtn {
   padding: 0.3rem 1.5rem;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 15rem;
-  color: black;
+  color: white;
   transition: 0.2s all ease-in;
 }
 #loginBtn:hover {
@@ -66,7 +68,7 @@ header {
 #animalsLogos img {
   width: 2rem;
 }
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 700px) {
   .Header-button {
     display: flex;
   }
