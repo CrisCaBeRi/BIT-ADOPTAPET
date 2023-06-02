@@ -26,7 +26,7 @@ export const  dataPet = [
         "gender": "F",
         "petBreed": "Criolla",
         "petAge": "2 años",
-        "imgUrl": "https://hips.hearstapps.com/goodhousekeeping/assets/18/07/chug.jpg"
+        "imgUrl": "https://i.pinimg.com/originals/94/d4/2f/94d42f1d97368ce6130958ba5c3ac5d6.jpg"
     },
     {
         "id": 4,
