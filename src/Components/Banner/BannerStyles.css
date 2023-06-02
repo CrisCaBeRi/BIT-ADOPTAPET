@@ -1,0 +1,85 @@
+@import url(../../Styles/App.css);
+:root {
+  --fontType: "Montserrat", sans-serif;
+  --mnFontW: 400;
+  --scFont: 300;
+  --btnFont: 700;
+  --primaryColor: orange;
+  --secColor: grey;
+}
+.banner {
+  height: 80vw;
+}
+#mainText {
+  color: var(--primaryColor);
+  font-family: var(--fontType);
+  font-size: 9vw;
+  margin-bottom: 40vw;
+  text-align: center;
+}
+.sloganAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sloganAction > h2 {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.486);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem;
+}
+#bannerImg {
+  width: 70vw;
+  position: absolute;
+  top: 10rem;
+  z-index: -1;
+}
+.sloganAction button {
+  background-color: var(--primaryColor);
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  font-family: var(--fontType);
+  font-weight: var(--btnFont);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+.sloganAction button:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 670px) {
+  .banner {
+    padding-right: 30vw;
+    height: 35vw;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .sloganAction,
+  .sloganAction > h2 {
+    text-align: left;
+    margin-left: 0;
+    align-items: start;
+  }
+
+  #mainText {
+    font-size: 4vw;
+    margin: 0;
+    text-align: left;
+  }
+  #bannerImg {
+    width: 35vw;
+    right: 5vw;
+  }
+}
+@media screen and (min-width: 1072px) {
+  .banner {
+    padding-bottom: 10vw;
+  }
+}

@@ -1,11 +1,6 @@
 import "./KnowMoreStyles.css";
 import mision from "./Assets/mision.png";
 import vision from "./Assets/vision.png";
-import facebook from "./Assets/facebook.png";
-import instagram from "./Assets/instagram.png";
-import youtube from "./Assets/youtube .png";
-import tiktok from "./Assets/tiktok.png";
-
 export const KnowMore = () => {
   return (
     <section className="knowMore">
@@ -61,30 +56,7 @@ export const KnowMore = () => {
           <li>
             <span>Dirección:</span>Calle 43 # 59a-07{" "}
           </li>
-        </ul>
-
-        <ul className="socialMedia">
-          <li>
-            <picture>
-              <img src={facebook} alt="logo sección contacto" />
-            </picture>
-          </li>
-          <li>
-            <picture>
-              <img src={instagram} alt="logo sección contacto" />
-            </picture>
-          </li>
-          <li>
-            <picture>
-              <img src={youtube} alt="logo sección contacto" />
-            </picture>
-          </li>
-          <li>
-            <picture>
-              <img src={tiktok} alt="logo sección contacto" />
-            </picture>
-          </li>
-        </ul>
+        </ul>        
       </span>
     </section>
   );
