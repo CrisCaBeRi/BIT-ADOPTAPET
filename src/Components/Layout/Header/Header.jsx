@@ -51,7 +51,7 @@ export const Header = () => {
               <button>Conoce más</button>
             </Link>
             {userLogged ? (
-              <span>Hola {userLogged.name}</span>
+              <span id="nameUser">Hola {userLogged.name}</span>
             ) : (
               <Link to="/login">
                 <button id="loginBtn">Iniciar sesión</button>
