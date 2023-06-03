@@ -7,12 +7,14 @@ import logo from "../Assets/LogoWhite.svg";
 export default function AddUser() {
   const { addUser, userLogged } = useContext(USERSCONTEXT);
   console.log(userLogged);
+
   const newUser = (e) => {
     e.preventDefault();
     let { name, email, password, phoneNumber } = e.target.elements;
     addUser(name.value, email.value, password.value, phoneNumber.value);
     e.target.reset();
   };
+  
   return (
     <>{/* //!FALTAN LOS MENSAJES DE USUARIO YA REGISTRADO */}
       {!userLogged ? (

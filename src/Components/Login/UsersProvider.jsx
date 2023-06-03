@@ -12,34 +12,32 @@ const UsersProvider = ({ children }) => {
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.error("Error", error));
-    /* return () => {
+    return () => {
       setUsers([]);
-    }; */
+    };
   }, []);
 
-  const loginUser = (email, password) => {   
+  const loginUser = (email, password) => {
     let userFinded = users.find(
       (user) => user.email === email && user.password === password
-    );   
-    if(!userFinded){
-      setError("Usuario o contraseña invalida"); 
+    );
+    if (!userFinded) {
+      setError("Usuario o contraseña invalida");
       setUserLogged(null);
       return false;
     }
     setUserLogged(userFinded);
-    setError(null)
-    console.log(userLogged)
-    console.log(error)
-  };
-
-   /* const LOGOUT = () => {
-    setUserLogged(null)
-  } */
+    setError(null);
+    console.log(userLogged);
+    console.log(error);
+  };  
 
   const addUser = (name, email, password, phoneNumber) => {
+    console.log(name);
     //Validaton if exist
     const userFinded = users.filter((user) => user.email === email);
-    if (userFinded) {
+    console.log(userFinded)
+    if (!userFinded) {
       setError("Un usuario ya posee este correo o contraseña");
     } else {
       fetch("https://64715b536a9370d5a41a5328.mockapi.io/Users", {
@@ -59,6 +57,7 @@ const UsersProvider = ({ children }) => {
           setUsers([...users, data]);
         })
         .catch((error) => console.error("Error", error));
+      setError(null);
     }
   };
 

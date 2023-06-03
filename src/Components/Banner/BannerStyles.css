@@ -61,6 +61,9 @@
     justify-content: center;
     align-items: center;
   }
+  .sloganAction > h2 {
+    color: var(--secColor);    
+  }
   .sloganAction,
   .sloganAction > h2 {
     text-align: left;
