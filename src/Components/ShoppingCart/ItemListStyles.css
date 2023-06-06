@@ -1,0 +1,6 @@
+@import url(../../Styles/App.css);
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
