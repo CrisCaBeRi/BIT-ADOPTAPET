@@ -1,0 +1,65 @@
+@import url(../../Styles/App.css);
+:root {
+  --fontType: "Montserrat", sans-serif;
+  --mnFontW: 400;
+  --scFont: 300;
+  --btnFont: 700;
+  --primaryColor: orange;
+  --secColor: grey;
+}
+.workResume {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+.workResume > h2 {
+  text-align: center;
+  color: var(--primaryColor);
+  font-size: 2rem;
+}
+.workResume > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cardsWorks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.linkToPag {
+  transition: 0.2s all ease-in;
+}
+.linkToPag:hover {
+  transform: scale(1.1);
+  color: var(--primaryColor);
+}
+.cardsWorks h3 {
+  color: black;
+  transition: 0.2s all ease-in;
+}
+.cardsWorks h3:hover {
+  color: var(--primaryColor);
+  transform: scale(1.1);
+}
+.linkToPag > picture > img {
+  width: 10vw;
+}
+@media screen and (min-width: 678px) {
+  .workResume {
+    margin: 10vw 0;
+  }
+  .workResume > article {
+    flex-direction: row;
+  }
+  .cardsWorks {
+    margin: 1rem;
+  }
+  .linkToPag > picture > img {
+    width: 5vw;
+  }
+}
