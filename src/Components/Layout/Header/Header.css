@@ -89,10 +89,11 @@ header {
     opacity: 1;
   }
   .navigation {
-    height: 80vh;
+    margin-top: -30vw;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 0;
   }
   .Header-button {

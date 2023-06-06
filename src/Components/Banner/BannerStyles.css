@@ -14,7 +14,6 @@
   color: var(--primaryColor);
   font-family: var(--fontType);
   font-size: 9vw;
-  margin-bottom: 40vw;
   text-align: center;
 }
 .sloganAction {
@@ -52,7 +51,12 @@
 .sloganAction button:hover {
   transform: scale(1.1);
 }
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 400px) {
+  #mainText {
+    margin-bottom: 40%;
+  }
+}
+@media screen and (min-width: 678px) {
   .banner {
     padding-right: 30vw;
     height: 35vw;
@@ -62,7 +66,7 @@
     align-items: center;
   }
   .sloganAction > h2 {
-    color: var(--secColor);    
+    color: var(--secColor);
   }
   .sloganAction,
   .sloganAction > h2 {
